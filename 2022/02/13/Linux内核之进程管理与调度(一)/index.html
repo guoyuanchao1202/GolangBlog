@@ -69,7 +69,7 @@
 <meta property="og:image" content="https://guoyuanchao1202/GolangBlog.github.io/2022/02/13/Linux内核之进程管理与调度(一)/2.png">
 <meta property="og:image" content="https://guoyuanchao1202/GolangBlog.github.io/2022/02/13/Linux内核之进程管理与调度(一)/3.png">
 <meta property="og:image" content="https://guoyuanchao1202/GolangBlog.github.io/2022/02/13/Linux内核之进程管理与调度(一)/4.png">
-<meta property="og:updated_time" content="2022-02-25T13:36:37.464Z">
+<meta property="og:updated_time" content="2022-02-27T12:40:31.986Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux内核之进程管理与调度(一)">
 <meta name="twitter:description" content="进程是任何多道程序设计的操作系统的基本概念，通常把进程定义为程序执行的示例，作为资源分配的单位。所有的现代操作系统都能够同时运行若干个进程，至少在用户看来是这样的。如果系统只有一个处理器，那么在给定时刻只能有一个程序可以运行，在多处理器系统中才能够做到真正的并行，并行进行的树木取决于处理器数量。Linux作为最流行的现代操作系统，自然是多到程序设计，那么Linux又是如何定义进程，使其能够表示一个">
@@ -303,7 +303,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-02-25 21:36:37" itemprop="dateModified" datetime="2022-02-25T21:36:37+08:00">2022-02-25</time>
+                <time title="修改时间：2022-02-27 20:40:31" itemprop="dateModified" datetime="2022-02-27T20:40:31+08:00">2022-02-27</time>
               </span>
             
           
@@ -349,8 +349,8 @@
 <h3 id="普通进程"><a href="#普通进程" class="headerlink" title="普通进程"></a>普通进程</h3><p>实际上系统中的大多数进程都是普通进程，但是普通进程之间仍然可以根据重要性来分配优先级。一个通用的例子：编译程序和编辑程序。相比于和用户交互的编辑程序，编译程序的优先级更低，这样编辑程序能够更快的响应用户，使得用户体验更好。</p>
 <h3 id="优先级划分"><a href="#优先级划分" class="headerlink" title="优先级划分"></a>优先级划分</h3><p>Linux系统将所有进程(软实时进程和普通进程)划分了140个优先级(0-139),其中</p>
 <ul>
-<li>0-99：表示实时进程的优先级，数值越大优先级越高(优先级为99的实时进程具有整个系统最高优先级)</li>
-<li>100-139：表示普通进程的优先级，数值越小优先级越高(和上面刚好相反)</li>
+<li>0-99：表示实时进程的优先级，数值越大优先级越低</li>
+<li>100-139：表示普通进程的优先级，数值越小优先级越高</li>
 </ul>
 <p>可能这样的设计很奇怪，但是具体这么设计的原因已经无从考证。</p>
 <h3 id="进程生命周期"><a href="#进程生命周期" class="headerlink" title="进程生命周期"></a>进程生命周期</h3><p>进程类似于人类，它们被产生，有或多或少有效的生命，可能产生若干个子进程、最终都会死亡。唯一的区别在于进程没有性别(hhh-_-)。</p>
@@ -840,6 +840,10 @@
 
             <div class="post-nav-prev post-nav-item">
               
+                <a href="/2022/02/25/Linux内核之进程管理与调度-二/" rel="prev" title="Linux内核之进程管理与调度(二)">
+                  Linux内核之进程管理与调度(二) <i class="fa fa-chevron-right"></i>
+                </a>
+              
             </div>
           </div>
         
@@ -905,7 +909,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
